@@ -38,7 +38,10 @@ export const Navbar = ({ isDarkTheme, toggleOpen, toggleDarkTheme }) => {
     <>
       <Nav bgcolor={colorCodes.bgCode} scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo color={colorCodes.navTextCode} to="/" onClick={toggleHome}>
+          <NavLogo
+            color={colorCodes.navTextCode}
+            to="/portfolio"
+            onClick={toggleHome}>
             terence.lim
           </NavLogo>
           <MobileIcon color={colorCodes.navTextCode} onClick={toggleOpen}>

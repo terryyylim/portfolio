@@ -36,7 +36,7 @@ function App() {
         <Route exact path="/portfolio">
           <Home isDarkTheme={isDarkTheme} />
         </Route>
-        <Route exact path="*">
+        <Route exact path="/portfolio/*">
           <Page404 />
         </Route>
       </Switch>
