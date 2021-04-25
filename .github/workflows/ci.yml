@@ -1,0 +1,16 @@
+name: CI
+on: push
+
+jobs:
+  lint-ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - name: Install dependencies
+        run: npm config set unsafe-perm true && npm install --no-optional --verbose
+      - name: Lint UI files
+        run: npm run lint
